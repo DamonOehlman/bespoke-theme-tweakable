@@ -1,0 +1,35 @@
+{
+  "name": "bespoke-theme-tweakable",
+  "version": "0.0.0",
+  "description": "A simple dark theme for bespoke.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamonOehlman/bespoke-theme-dark.git"
+  },
+  "keywords": [
+    "bespoke-theme",
+    "bespoke-plugin"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/bespoke-theme-dark/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/bespoke-theme-dark",
+  "dependencies": {
+    "bespoke-classes": "^1.0.0",
+    "brfs": "^1.2.0",
+    "dot": "^1.0.2",
+    "feature": "^0.1.4",
+    "insert-css": "^0.2.0"
+  },
+  "browserify": {
+    "transform": [
+      "brfs"
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+@import url(http://fonts.googleapis.com/css?family={{= it.font || 'Montserrat'}});
+@import url(http://fonts.googleapis.com/css?family={{= it.font || 'Source+Code+Pro'}});
+
+html, body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: {{= it.color || 'white' }};
+  background: {{= it.background || 'black' }};
+}
+
+.bespoke-parent {
+  text-align: center;
+  font-size: 1.2em;
+  display: flex;
+  width: auto;
+  transition: transform 0.5s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.bespoke-slide {
+  padding: 5vh 5vw;
+  width: 90vw;
+  height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+.bespoke-slide ul, .bespoke-slide ol {
+  text-align: left;
+}
+
+.bespoke-slide h1 {
+  font-size: 2em;
+}
+
+.bespoke-slide pre, .bespoke-slide code {
+  font-family: 'Source Code Pro', monospace;
+}
