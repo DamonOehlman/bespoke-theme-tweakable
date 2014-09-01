@@ -4,13 +4,23 @@ var transform = require('feature/css')('transform');
 var dot = require('dot');
 var theme = dot.template(fs.readFileSync(__dirname + '/theme.css', 'utf8'));
 
+/**
+	# bespoke-theme-tweakable
+
+	A simple [bespoke.js](https://github.com/markdalgleish/bespoke.js) theme
+	that can be configured on the fly using client-side templating.
+
+	## Example Usage
+
+	To be completed.
+
+**/
 module.exports = function(opts) {
-  var css = theme(opts);
+  insertCss(theme(opts || {}), { prepend: true });
 
   return function(deck) {
     var parent = deck.parent;
 
-    insertCss(css, { prepend: true });
     require('bespoke-classes')()(deck);
 
     deck.on('activate', function(evt) {
