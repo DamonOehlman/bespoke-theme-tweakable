@@ -1,8 +1,9 @@
-var fs = require('fs');
-var insertCss = require('insert-css');
-var transform = require('feature/css')('transform');
-var dot = require('dot');
-var theme = dot.template(fs.readFileSync(__dirname + '/theme.css', 'utf8'));
+const fs = require('fs');
+const insertCss = require('insert-css');
+const transform = require('feature/css')('transform');
+const dot = require('dot');
+const theme = dot.template(fs.readFileSync(__dirname + '/theme.css', 'utf8'));
+const reFontOption = /^(\w)+Font$/;
 
 /**
 	# bespoke-theme-tweakable
@@ -16,7 +17,9 @@ var theme = dot.template(fs.readFileSync(__dirname + '/theme.css', 'utf8'));
 
 **/
 module.exports = function(opts) {
-  insertCss(theme(opts || {}), { prepend: true });
+  const parsedOpts = parseFontOpts(opts);
+
+  insertCss(theme(parsedOpts), { prepend: true });
 
   return function(deck) {
     var parent = deck.parent;
@@ -36,3 +39,16 @@ module.exports = function(opts) {
     });
   };
 };
+
+function parseFontOpts(opts) {
+  let parsedOpts = {};
+
+  Object.keys(opts || {}).forEach(function(key) {
+    if (reFontOption.test(key)) {
+      parsedOpts[`${key}Name`] = opts[key];
+      parsedOpts[key] = opts[key].replace(' ', '+');
+    }
+  });
+
+  return parsedOpts;
+}
