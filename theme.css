@@ -55,6 +55,14 @@ html, body {
 
 .bespoke-slide pre, .bespoke-slide code {
   font-family: "{{= it.codeFontName || 'Source Code Pro'}}", monospace;
+  flex-shrink: 1;
+  overflow: scroll;
+}
+
+code.hljs {
+  margin: 3vh 2vw;
+  background: none;
+  padding: 0;
 }
 
 .bespoke-slide li {
