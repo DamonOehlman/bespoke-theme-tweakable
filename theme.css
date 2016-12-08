@@ -1,6 +1,6 @@
-@import url(http://fonts.googleapis.com/css?family={{= it.headerFont || 'Montserrat'}});
-@import url(http://fonts.googleapis.com/css?family={{= it.primaryFont || 'Montserrat'}});
-@import url(http://fonts.googleapis.com/css?family={{= it.codeFont || 'Source+Code+Pro'}});
+@import url(https://fonts.googleapis.com/css?family={{= it.headerFont || 'Montserrat'}});
+@import url(https://fonts.googleapis.com/css?family={{= it.primaryFont || 'Montserrat'}});
+@import url(https://fonts.googleapis.com/css?family={{= it.codeFont || 'Source+Code+Pro'}});
 
 html, body {
   margin: 0;
