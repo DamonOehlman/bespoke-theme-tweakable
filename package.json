@@ -23,10 +23,10 @@
   "homepage": "https://github.com/DamonOehlman/bespoke-theme-dark",
   "dependencies": {
     "bespoke-classes": "^1.0.0",
-    "brfs": "^1.2.0",
+    "brfs": "^2.0.2",
     "dot": "^1.0.2",
-    "feature": "^0.1.4",
-    "insert-css": "^0.2.0"
+    "feature": "^1.1.0",
+    "insert-css": "^2.0.0"
   },
   "browserify": {
     "transform": [
